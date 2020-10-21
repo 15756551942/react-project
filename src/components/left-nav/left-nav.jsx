@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router-dom'
 import { Menu } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
 
@@ -35,7 +36,7 @@ export default class NavLeft extends Component {
             onOpenChange={this.onOpenChange}
             >
                 <SubMenu key="sub1" icon={<MailOutlined />} title="Article管理">
-                    <Menu.Item key="1">Article管理列表</Menu.Item>
+                    <Menu.Item key="1"><Link to='/articlemanage'>Article管理列表</Link></Menu.Item>
                 </SubMenu>
             </Menu>
         </div>
