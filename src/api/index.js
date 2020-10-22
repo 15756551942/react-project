@@ -1,3 +1,5 @@
 import ajax from './ajax'
 
-export const reqLogin = (name,pwd) => ajax('http://dev.admin.carrots.ptteng.com/a/login;',{name,pwd},'POST')
+const BASE = 'http://localhost:8800'
+
+export const reqLogin = (name,pwd) => ajax(BASE + '/a/login;',{name,pwd},'POST')

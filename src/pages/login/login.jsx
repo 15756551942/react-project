@@ -3,17 +3,18 @@ import { Form, Input, Button, } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 import './login.less'
-import { reqLogin } from '../../api/index'
+import {reqLogin} from '../../api'
 
 const Login = () => {
-    const onFinish = (values) => {
-        const { name, pwd } = values
-        reqLogin(name, pwd).then(response => {
-            console.log('成功', response.data)
+    const onFinish = values => {
+        const {name,pwd} = values
+
+        reqLogin(name,pwd).then(response => {
+            console.log('成功',response.data)
         }).catch(error => {
-            console.log('失败', error)
+            console.log('失败',error)
         })
-    };
+      };
 
     return (
         <div className='login'>
