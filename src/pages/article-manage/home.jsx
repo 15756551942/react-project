@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { Card,Button,Table } from 'antd';
+import { Card,Button,Table,Select } from 'antd';
 import {PlusOutlined} from '@ant-design/icons'
 
 import LinkButton from '../../components/link-button/link-button'
@@ -75,9 +75,39 @@ export default class Home extends Component{
       <Button type='primary'><PlusOutlined></PlusOutlined>新增</Button>
     )
     return(
-      <Card title="Article列表" extra={extre} className='home'>
+      <div style={{margin:20}}>
+        <Card style={{marginBottom:30}}>
+          <div>
+            <span>发布时间</span>
+            <input type="text"/>
+          </div>
+          <div>
+            <span>修改时间</span>
+            <input type="text"/>
+          </div>
+          <div>
+            <span>类型</span>
+            <Select>
+              <Select.Option>全部</Select.Option>
+              <Select.Option>首页Banner</Select.Option>
+              <Select.Option>找职业Banner</Select.Option>
+              <Select.Option>找精英Banner</Select.Option>
+              <Select.Option>行业大图</Select.Option>
+            </Select>
+          </div>
+          <div>
+            <span>状态</span>
+            <Select>
+              <Select.Option>全部</Select.Option>
+              <Select.Option>上线</Select.Option>
+              <Select.Option>草稿</Select.Option>
+            </Select>
+          </div>
+        </Card>
+        <Card title="Article列表" extra={extre} className='home'>
           <Table dataSource={articlelis} columns={columns} bordered rowKey='key'/>;
-      </Card>
+        </Card>
+      </div>
     )
   }
 }

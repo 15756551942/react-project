@@ -8,7 +8,6 @@ import './left-nav.less'
 const { SubMenu } = Menu;
 
 export default class NavLeft extends Component {
-    // submenu keys of first level
     rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
   
     state = {
@@ -30,11 +29,7 @@ export default class NavLeft extends Component {
       return (
         <div className='left-nav'>
             <header className='left-nav-head'><h1>萝卜多后台管理系统</h1></header>
-            <Menu
-            mode="inline"
-            openKeys={this.state.openKeys}
-            onOpenChange={this.onOpenChange}
-            >
+            <Menu mode="inline" openKeys={this.state.openKeys} onOpenChange={this.onOpenChange} theme='dark'>
                 <SubMenu key="sub1" icon={<MailOutlined />} title="Article管理">
                     <Menu.Item key="1"><Link to='/articlemanage'>Article管理列表</Link></Menu.Item>
                 </SubMenu>
@@ -43,16 +38,3 @@ export default class NavLeft extends Component {
       );
     }
   }
-  
-  
-
-// export default class LeftNav extends Component{
-//     render(){
-//         return(
-//             <div className='left-nav'>
-//                 <header className='left-nav-head'><h1>萝卜多后台管理系统</h1></header>
-
-//             </div>
-//         )
-//     }
-// }
