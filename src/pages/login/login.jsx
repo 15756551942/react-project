@@ -4,9 +4,16 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 import './login.less'
 import {reqLogin} from '../../api'
+// import test from '../../api/test'
 
 const Login = () => {
     const onFinish = values => {
+        // const {name,pwd} = values
+        // const data = "name=" + name + "&pwd=" + pwd
+        // test(data)
+
+
+
         const {name,pwd} = values
 
         reqLogin(name,pwd).then(response => {

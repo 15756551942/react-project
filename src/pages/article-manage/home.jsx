@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { Card,Button,Table,Select } from 'antd';
+import { Card,Button,Table,Select,Input } from 'antd';
 import {PlusOutlined} from '@ant-design/icons'
 
 import LinkButton from '../../components/link-button/link-button'
@@ -7,6 +7,106 @@ import LinkButton from '../../components/link-button/link-button'
 export default class Home extends Component{
   state = {
     articlelis:[
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
+      {
+        key: '1',
+        ID: 1,
+        name: 'test',
+        type: '行业大图',
+        pubtime: '20200101',
+        modtime: '20200102',
+        puber: 'admin',
+        sta: '在线',
+      },
       {
         key: '1',
         ID: 1,
@@ -61,7 +161,7 @@ export default class Home extends Component{
       {
         title: '操作',
         align: 'center',
-        render: () => (
+        render: (product) => (
           <span>
             <LinkButton>下线</LinkButton>
             <LinkButton>编辑</LinkButton>
@@ -76,36 +176,42 @@ export default class Home extends Component{
     )
     return(
       <div style={{margin:20}}>
-        <Card style={{marginBottom:30}}>
-          <div>
-            <span>发布时间</span>
-            <input type="text"/>
+        <Card style={{marginBottom:30,height:200}}>
+          <div style={{display:'flex',justifyContent:'space-between',flexWrap:'wrap',height:100,alignItems:'space-between'}}>
+            <span style={{width:350}}>
+              <span>发布时间</span>
+              <Input type="text" style={{width:250,marginLeft:20}}/>
+            </span>
+            <span style={{width:350}}>
+              <span>修改时间</span>
+              <Input type="text" style={{width:250,marginLeft:20}}/>
+            </span>
+            <span style={{width:350}}>
+              <span>类型</span>
+              <Select value='1' style={{width:250,marginLeft:20}}>
+                <Select.Option value='1'>全部</Select.Option>
+                <Select.Option value='2'>首页Banner</Select.Option>
+                <Select.Option value='3'>找职业Banner</Select.Option>
+                <Select.Option value='4'>找精英Banner</Select.Option>
+                <Select.Option value='5'>行业大图</Select.Option>
+              </Select>
+            </span>
+            <span style={{width:350}}>
+              <span>状态</span>
+              <Select value='1' style={{width:250,marginLeft:48}}>
+                <Select.Option value='1'>全部</Select.Option>
+                <Select.Option value='2'>上线</Select.Option>
+                <Select.Option value='3'>草稿</Select.Option>
+              </Select>
+            </span>
           </div>
-          <div>
-            <span>修改时间</span>
-            <input type="text"/>
-          </div>
-          <div>
-            <span>类型</span>
-            <Select>
-              <Select.Option>全部</Select.Option>
-              <Select.Option>首页Banner</Select.Option>
-              <Select.Option>找职业Banner</Select.Option>
-              <Select.Option>找精英Banner</Select.Option>
-              <Select.Option>行业大图</Select.Option>
-            </Select>
-          </div>
-          <div>
-            <span>状态</span>
-            <Select>
-              <Select.Option>全部</Select.Option>
-              <Select.Option>上线</Select.Option>
-              <Select.Option>草稿</Select.Option>
-            </Select>
+          <div style={{marginLeft:1000}}>
+            <Button type='primary'>清空</Button>
+            <Button type='primary'>搜索</Button>
           </div>
         </Card>
         <Card title="Article列表" extra={extre} className='home'>
-          <Table dataSource={articlelis} columns={columns} bordered rowKey='key'/>;
+          <Table dataSource={articlelis} columns={columns} bordered rowKey='key' pagination={{showQuickJumper:true}}/>;
         </Card>
       </div>
     )
