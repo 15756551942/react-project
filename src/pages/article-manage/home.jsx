@@ -18,7 +18,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '2',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -28,7 +28,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '3',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -38,7 +38,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '4',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -48,7 +48,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '5',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -58,7 +58,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '6',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -68,7 +68,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '7',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -78,7 +78,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '8',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -88,7 +88,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '9',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -98,7 +98,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '10',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -108,7 +108,7 @@ export default class Home extends Component{
         sta: '在线',
       },
       {
-        key: '1',
+        key: '11',
         ID: 1,
         name: 'test',
         type: '行业大图',
@@ -172,7 +172,7 @@ export default class Home extends Component{
     ];
     
     const extre = (
-      <Button type='primary'><PlusOutlined></PlusOutlined>新增</Button>
+      <Button type='primary' onClick={() => this.props.history.push('/articlemanage/add')}><PlusOutlined></PlusOutlined>新增</Button>
     )
     return(
       <div style={{margin:20}}>

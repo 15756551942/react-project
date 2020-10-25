@@ -15,7 +15,8 @@ const Login = () => {
 
 
         const {name,pwd} = values
-
+        console.log(name,pwd)
+        // const data = "name=" + name + "&pwd=" + pwd
         reqLogin(name,pwd).then(response => {
             console.log('成功',response.data)
         }).catch(error => {
