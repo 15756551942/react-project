@@ -2,7 +2,6 @@ export default function test(data){
     var xhr = new XMLHttpRequest()
 
     xhr.open('POST','/api/a/login')
-    xhr.setRequestHeader('Content-Type', 'text/html; charset=utf-8')
     xhr.send(data)
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4){
