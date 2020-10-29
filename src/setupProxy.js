@@ -3,11 +3,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function(app) {
 
   app.use('/api', createProxyMiddleware({
-    // target: 'http://106.75.15.3:7001/',
-    // target: 'http://39.107.82.218:30500/',
     target: 'http://dev.admin.carrots.ptteng.com/',
     changeOrigin: true,
-    secure: false,
     pathRewrite: {
       "^/api": ""
     }}));
